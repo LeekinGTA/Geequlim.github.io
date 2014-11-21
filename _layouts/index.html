@@ -43,7 +43,8 @@
 
         <nav id="pl__container">
         {% for post in site.posts %}
-          <a class="{{ post.categories }} pl__all" href="{{ post.url }}"><span class="pl__circle"></span><span class="pl__title">{{ post.title }}</span><span class="pl__date">{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }}</span></a>
+          <a class="{% for tag in post.tags %}{{ tag }} {% endfor %} pl__all" href="{{ post.url }}"><span class="pl__circle"></span><span class="pl__title">{{ post.title }}</span><span class="pl__date">{{ post.date | date: "%d %b %Y %H:%M}}</span></a>
+          <!-- <a class="{{ post.categories }} pl__all" href="{{ post.url }}"><span class="pl__circle"></span><span class="pl__title">{{ post.title }}</span><span class="pl__date">{{ post.date | date: "%d %b %Y %H:%M:%S" }}</span></a> -->
         {% endfor %}
         </nav>
       </div> <!-- end #posts-list -->
