@@ -1,0 +1,121 @@
+---
+layout: project
+title:  "帧动画编辑器"
+date:   2014-11-21 15:10:31
+author: Geequlim
+categories:
+- project
+- 开发工具
+img: FAEDiter.jpg
+thumb: FAEDitor.png
+carousel:
+- faeditorSingle01.jpg
+- faeditorSingle02.jpg
+client: 游戏开发者
+website: http://geequlim.com/project/帧动画编辑器/
+---
+
+####本工具基于*SG2D引擎[^1]*和*Walnut扩展[^2]*制作，会在SG2D引擎和Walnut开源第一时间开放源代码。
+
+[^1]:SG2D引擎是由广州硕星科技有限公司开发的跨平台应用、游戏开发解决方案。通过该引擎使用C++和Lua开发支持 Mac OSX、Win32、Android、iOS、Flash 平台的应用程序或游戏。目前该引擎暂命名为SG2D,其作者称会在近期将引擎开放源代码。
+
+[^2]:Walnut扩展：本人有幸在SG2D开源前得到该引擎的源码，在使用SG2D引擎开发过程中为该引擎写的一些扩展代码。目前包括对TexturePacker的支持、菜单功能的实现、逐帧动画的封装等。作者正在不断完善该扩展，并且将随SG2D引擎开放源代码。
+
+
+1. 应用特点
+    - 支持从使用[Texture Packer]以Generic XML发布的精灵图集（仅测试过png格式图片）中加载图片
+    - 支持自由地插入、删除、排序动画帧和图库（图库为制定目录）
+    - 支持Window、Mac OSX和Android平台
+2. 文件说明
+    - 默认情况下动画保存为以fa为后缀的zip文件
+    - fa文件中包含动画所需的图片文件和索引文件frameInfo..xml
+3. 已知问题
+    - 尚未发现
+    
+
+[Texture Packer]:https://www.codeandweb.com/texturepacker
+
+[点我下载FAEditor帧动画编辑器](http://pan.baidu.com/s/1qW3B6LQ)
+
+-----
+
+####剖析编辑器生成的动画文件
+
+动画文件是以fa为后缀的zip格式，使用[SG2D]引擎的zip文件库保存，保存时未设置文件压缩率和解压密码。
+
+[openBook.fa]:http://geequlim.qiniudn.com/file_openBook.fa "点击下载"
+
+![](http://geequlim.qiniudn.com/img_openBookPre.gif)
+
+
+将上面展示的动画文件[openBook.fa]文件复制到一个空文件夹然后解压看一下：
+
+    $ mkdir openBookAnimaFiles
+    $ cd openBookAnimaFiles
+    $ unzip ../openBook.fa 
+    Archive:  ../openBook.fa
+      inflating: frameInfo.xml           
+      inflating: openBook.png            
+    $ tree ..
+    ..
+    ├── openBook.fa
+    └── openBookAnimaFiles
+        ├── frameInfo.xml
+        └── openBook.png
+    1 directory, 3 files
+
+解压得到了由[Texture Packer]拼合的图片openBook.png和动画编辑器生成的帧动画信息fameInfo.xml文件。
+
+
+![openBook.png文件](http://geequlim.qiniudn.com/img_openBook.png)
+
+fameInfo.xml文件内容如下所示：
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <FrameAnimation frameInterval="83">
+    	<frame n="ba1.png" f="openBook.png" x="370" y="214" ox="0"  oy="0" w="62" h="80" r="y"/>
+    	<frame n="ba2.png" f="openBook.png" x="2" y="372" ox="0"  oy="0" w="92" h="80" r="n"/>
+    	<frame n="ba3.png" f="openBook.png" x="354" y="104" ox="0"  oy="0" w="98" h="108" r="n"/>
+    	<frame n="ba4.png" f="openBook.png" x="2" y="2" ox="0"  oy="0" w="114" h="116" r="n"/>
+    	<frame n="ba5.png" f="openBook.png" x="256" y="246" ox="0"  oy="0" w="112" h="138" r="y"/>
+    	<frame n="ba6.png" f="openBook.png" x="98" y="252" ox="0"  oy="0" w="108" h="138" r="y"/>
+    	<frame n="ba7.png" f="openBook.png" x="272" y="2" ox="0"  oy="0" w="136" h="100" r="n"/>
+    	<frame n="ba8.png" f="openBook.png" x="256" y="104" ox="0"  oy="0" w="96" h="140" r="y"/>
+    	<frame n="ba9.png" f="openBook.png" x="2" y="224" ox="0"  oy="0" w="94" h="146" r="y"/>
+    	<frame n="ba10.png" f="openBook.png" x="158" y="104" ox="0"  oy="0" w="96" h="146" r="y"/>
+    	<frame n="ba11.png" f="openBook.png" x="118" y="2" ox="0"  oy="0" w="152" h="100" r="n"/>
+    	<frame n="ba12.png" f="openBook.png" x="2" y="120" ox="0"  oy="0" w="154" h="102" r="n"/>
+    </FrameAnimation>
+
+####动画帧文件解析：
+fameInfo.xml文件由FAEditor编辑器生成，有两种节点类型。其中根节点只有一个**属性frameInterval表示播放动画时两帧之间的时间间隔，单位是毫秒**。
+
+在根节点下的frame节点表示动画每一帧的信息：
+
+*下面所讲的坐标均表示以左上角为原点的直角坐标系，横坐标值向右增大，纵坐标值向下增大。*
+
+* n 动画帧名称
+* f 动画帧的贴图文件名
+* x 动画帧纹理在贴图纹理的横坐标
+* y 动画帧纹理在贴图纹理的纵坐标
+* ox 动画帧的横向偏移量
+* oy 动画帧的纵向偏移量
+* w 帧纹理宽度
+* h 帧纹理高度
+* r 贴图是否由[Texture Packer]拼合时被翻转，'y'为是，‘n’为否
+
+----
+
+####Tips
+1. 添加图片到帧列表中，您可以将图片列表中的图片拖到动画帧列表中或者鼠标右键点击列表中的图片。
+2. 不知道到那个按钮或输入框的作用？将鼠标放到上面1停留一秒试试。
+3. 使用快捷键会提高工作效率，快捷键都写在菜单项的后面。
+4. 拖放动画帧即可给动画帧排序。
+5. SG2D引擎的解析代码已经集成到Walnut扩展内，将随根据SG2D一起开放源代码。
+
+----
+
+####注意事项
+* 添加到图片库的文件未必会被保存到动画文件中，动画文件中只会包含动画帧使用到的图片。如果图片列表中的图片未添加到动画帧列表中，该图片有可能不被保存，在您清理资源的时候请留意！
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

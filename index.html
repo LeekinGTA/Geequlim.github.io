@@ -1,8 +1,62 @@
 ---
 layout: index
-title: Geequlim
+title: 主页
+permalink: /
 ---
+<!-- 非常好看，但还用不上 
+<div id="service">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-md-4">
+                <i class="fa fa-heart-o"></i>
+                <h4>Handsomely Crafted</h4>
+                <p>Geequlim的个人主页.</p>
+                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-flask"></i>
+                <h4>Retina Ready</h4>
+                <p>呵呵。这是哪里？.</p>
+                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-trophy"></i>
+                <h4>Quality Theme</h4>
+                <p>哈哈，这又是什么？.</p>
+                <p><br/><a href="#" class="btn btn-theme">More Info</a></p>
+            </div>		 				
+        </div>
+    </div>
+</div>
+-->
+<!--/service -->
 
-<article id="post__content">
-  <h1 id="post__title">欢迎造访Geequlim.com</h1>
-</article> <!-- end #post__content -->
+
+{% include portfolio.html title="最新作品" limit=6 %}
+
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-3">
+            <h4>最近发表</h4>
+            <div class="hline"></div>
+            {% for post in site.categories['blog'] limit:3 %} 
+                <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}.</a></p>
+            {% endfor %} 
+        </div>
+
+        <div class="col-lg-3">
+            <h4>常见问题</h4>
+            <div class="hline"></div>
+            {% for post in site.categories['question'] %} 
+                <p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
+            {% endfor %}
+        </div>
+
+        <div class="col-lg-4 col-lg-offset-1">
+            <h4>关于本站</h4>
+            <p>{{ site.about }}</p>
+            <p><br/><a href="{{ "/about/" | prepend: site.baseurl }}" class="btn btn-theme">了解更多</a></p>
+        </div>
+
+    </div><! --/row -->
+</div><! --/container -->
