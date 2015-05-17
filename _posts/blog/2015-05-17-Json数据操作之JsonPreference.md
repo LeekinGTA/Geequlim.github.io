@@ -7,8 +7,8 @@ categories:
 - blog 
 - 数据操作
 - Json
-img: 
-thumb: 
+img: josn object.gif
+thumb: ic_json.jpg
 
 ---
 
@@ -88,7 +88,7 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
     JsonPreference getPreference(const std::string & key)const;
     
     
-#### 5、获取Json文本内容，至于怎么处理自己看着办咯<img src="emoji/smile" width="18"/>
+#### 5、获取Json文本内容，至于怎么处理自己看着办咯
 
     /**
     *  获取配置内容
@@ -96,7 +96,7 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
     */
     std::string jsonContent()const;
     
-#### 6、如果以上方法还满足不了你？<img src="emoji/fearful" width="18"/> 那我只好把Json对象交给你处置了
+#### 6、以上方法还满足不了你? 那我只好把Json对象交给你处置了
 
     /**
     *  获取Json对象
