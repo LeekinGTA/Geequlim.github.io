@@ -16,6 +16,8 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
  <!--more-->
  
 支持将 布尔值、浮点数值、字符串、JsonPreference对象 以 键值对、数组、键值对表 的形式储存
+
+请到我的Github中获取源代码 [JsonPreference.hpp](https://github.com/Geequlim/Walnut/blob/master/SourceCode/extension/json/JsonPreference.hpp)
  
 ###第三方库依赖库： 
 
