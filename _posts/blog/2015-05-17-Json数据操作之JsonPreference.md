@@ -13,18 +13,19 @@ thumb:
 ---
 
 JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助手。与SharedPreferences不同，是一个C++类，数据存储使用的是Json而不是XML。
- 
  <!--more-->
  
-#### ###  第三方库依赖库： 
+支持将 布尔值、浮点数值、字符串、JsonPreference对象 以 键值对、数组、键值对表 的形式储存
+ 
+###第三方库依赖库： 
 
 [jsonxx 轻量级的Json解析库，提供Json数据解析等Json基础数据操作功能。](https://github.com/hjiang/jsonxx)
 
-支持将 布尔值、浮点数值、字符串、JsonPreference对象 以 键值对、数组、键值对表 的形式储存
+
 
 ### 操作方法
 
-##### 1、设置、获取值
+####1、设置、获取值
 
     /**
     *  设置值
@@ -42,7 +43,7 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
     const bool getXXX(const std::string& key, const XXX & defaultValue)const;
     
 
-##### 2、设置、获取数组
+#### 2、设置、获取数组
 
     /**
     *  设置列表（数组）
@@ -56,7 +57,7 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
     *  @return 返回查找到的布尔值列表，如果未查找到则返回一个空的列表*/
     std::vector<XXX> getXXXArray(const std::string & key)const;
 
-##### 3、设置、获取数据表
+#### 3、设置、获取数据表
 
     /**
     *  设置布尔值数据表
@@ -71,7 +72,7 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
     std::map<std::string, XXX> getXXXMap(const std::string & key)const;
     
     
-##### 4、设置、获取JsonPreference
+#### 4、设置、获取JsonPreference
     
     /**
     *  设置子配置对象
@@ -87,7 +88,7 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
     JsonPreference getPreference(const std::string & key)const;
     
     
-##### 5、获取Json文本内容，至于怎么处理自己看着办咯<img src="emoji/smile" width="18"/>
+#### 5、获取Json文本内容，至于怎么处理自己看着办咯<img src="emoji/smile" width="18"/>
 
     /**
     *  获取配置内容
@@ -95,7 +96,7 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
     */
     std::string jsonContent()const;
     
-##### 6、如果以上方法还满足不了你？<img src="emoji/fearful" width="18"/> 那我只好把Json对象交给你处置了
+#### 6、如果以上方法还满足不了你？<img src="emoji/fearful" width="18"/> 那我只好把Json对象交给你处置了
 
     /**
     *  获取Json对象
@@ -171,7 +172,7 @@ JsonPreference是一个类似Android SDK中SharedPreferences的数据操作助�
         return 0;
     }
     
-##### 测试输出
+#### 测试输出
 
     boolValue = 1
     NumberValue = 3.14159
