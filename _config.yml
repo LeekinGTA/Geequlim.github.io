@@ -1,0 +1,46 @@
+encoding: UTF-8
+permalink: /:year/:month/:day/:title.html
+paginate: 5
+markdown: kramdown
+highlighter: pygments
+
+kramdown:
+  input: GFM
+
+# 作者信息
+author:
+  name: Geequlim
+  email: geequlim@gmail.com
+  link: http://geequlim.com/
+  weibo: http://weibo.com/lymean
+  github: https://github.com/Geequlim
+  github_username:  Geequlim
+  weibo_username:  Geequlim
+
+# 站点信息
+title : 一介码夫
+description: Geequlim的个人站点
+url: http://geequlim.com/
+rss_url: /feed.xml
+
+# gavatar头像及Favicon
+gavatar : /assets/img/logo.jpg
+favicon : /assets/img/favicon.png
+
+# disqus 设置
+#disqus:
+#  shortname: blademastercoder
+
+#profile 个人信息
+
+profile_desc : Geequlim
+
+# 首页除了最新文章外显示分类
+cates:
+- Essay
+# - Python
+# - OpenStack
+
+# 中文本地化
+locals:
+   newest : 最新文章

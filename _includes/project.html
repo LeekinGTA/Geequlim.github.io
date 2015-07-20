@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<div class="row">
+  <div class="col-md-12 aside3-title">
+    <br>
+    <h2 id="#identifier">{{ page.title }}</h2>
+  </div>
+  <div class="col-md-12 aside3-content">
+    <br />
+    <div id="content">
+      {{ content }}
+    </div>
+    <br />
+    <div class="row">
+      {% for project in page.projects %}
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">{{ project.title }}</div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-4 col-xs-12 center">
+                  <img src="{{ project.cover }}" alt="cover" class="img-thumbnail">
+                </div>
+                <div class="col-md-8 col-xs-12">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td>状态</td>
+                        <td>
+                          {% if project.status == '已完成' %}
+                            <span class="label label-success">{{ project.status }}</span>
+                          {% elsif project.status == '开发中' %}
+                            <span class="label label-info">{{ project.status }}</span>
+                          {% elsif project.status == '计划中' %}
+                            <span class="label label-default">{{ project.status }}</span>
+                          {% endif %}
+                        </td>
+                      </tr>
+                      <tr><td style="width:120px;">开发者</td><td>{{ project.author }}</td></tr>
+                      <tr><td>合作伙伴</td><td>{{ project.cooperator }}</td></tr>
+                      <tr><td>平台</td><td>{{ project.platform }}</td></tr>
+                      <tr><td>支持语言</td><td>{{ project.language }}</td></tr>
+                      <tr><td>依赖项目</td><td>{{ project.dependence }}</td></tr>
+                      <tr>
+                        <td>链接</td>
+                      <td>
+                        <a href="{{ project.link }}" title="{{ project.link }}">作品链接</a>
+                      </td></tr>
+                      <tr><td>简介</td><td>{{ project.description }}</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <hr>
+  </div>
+</div>

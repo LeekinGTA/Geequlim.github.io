@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">全部文章</h1>
+
+   {% for post in paginator.posts %}
+	<div class="row">
+		<div class="col-md-12 postbox">
+			<div class="allpost">
+				<div class="title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+				<div class="info">
+					<i class="fa fa-calendar"></i>&nbsp;{{ post.date | date: "%b %-d, %Y" }}
+					{% if post.tags.size > 0 %}
+				      <i class="fa fa-tags"></i>
+					<span class="index-post-tag">
+						{% for tag in post.tags %}
+							<a href="/pages/tags.html#{{tag}}">{{ tag}}</a>
+						{% endfor %}
+					</span>
+					{% endif %}
+				</div>
+				<div class="contentAbstract">{{ post.excerpt }}</div>
+			</div>
+			<a href="{{ post.url | prepend: site.baseurl }}"  class="readmore">阅读全文<i class="glyphicon glyphicon-chevron-right"></i></a>
+		</div>
+	</div>
+   {% endfor %}
+
+
+
+	{% if paginator.total_pages > 1 %}
+		<div class="pagination center">
+			  {% if paginator.previous_page %}
+			    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-right:5px;">上一页</span></a>
+			  {% endif %}
+
+			  {% for page in (1..paginator.total_pages) %}
+				    {% if page == paginator.page %}
+				      <span class="active_page x1">{{ page }}</span>
+				    {% elsif page == 1 %}
+				      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1">{{ page }}</span></a>
+				    {% else %}
+				      <a href="/page{{page}}"><span class="x1">{{ page }}</span></a>
+				    {% endif %}
+			  {% endfor %}
+
+			  {% if paginator.next_page %}
+			   	 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-left:5px;">下一页 </span></a>
+			  {% endif %}
+		</div>
+	{% endif %}
+  <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">使用RSS订阅</a></p>
+
+</div>
