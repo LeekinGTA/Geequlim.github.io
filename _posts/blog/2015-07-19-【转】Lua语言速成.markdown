@@ -1,18 +1,12 @@
 ---
 layout: post
-title: "【转】Lua语言速成示例"
-date: 2015-07-19 12:34:46
-author: Geequlim
-categories:
-- blog
-- 脚本语言
-img: lua_banner.jpg
-thumb: lua_icon.jpg
+title: 【转】Lua语言速成
+category: 技术
+tags: 脚本语言 Lua
+description:
 ---
 
 本文转自 [**X分钟速成Y**](http://learnxinyminutes.com/docs/zh-cn/lua-cn/)
-
-<!--more-->
 
 ---
 
@@ -401,7 +395,7 @@ g()  -- 打印343; 在此之前什么也不打印。
 
 ---
 
-###参考
+### 参考
 
 
 为什么？我非常兴奋地学习lua， 这样我就可以使用[Löve 2D游戏引擎](https://love2d.org/)来编游戏。

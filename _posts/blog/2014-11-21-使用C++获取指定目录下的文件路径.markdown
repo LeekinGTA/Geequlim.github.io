@@ -22,19 +22,16 @@ void getFiles(const std::string &basePath, std::vector<std::string > &files,cons
 
 {% endhighlight %}
 
-####**实现这个函数的功能需要如下步骤：**
+<h4>实现这个函数的功能需要如下步骤：</h4>
+
 * 验证输入参数的合法性
-    - 验证通过
-        * 打开输入的目录文件
-            + 打开成功
-                - 循环获取到输入目录下的文件路径 curFilePath
-
-                    如果传入参数searchSubDir为真，则递归搜索当前目录调用 getFiles(curFilePath, files, searchSubDir)
-
-                - 添加当前文件路径curFilePath到容器中
-            + 打开失败 返回
-         * 关闭输入目录文件
-     - 验证不通过 返回
+* 验证通过继续,验证不通过 返回
+* 打开输入的目录文件
+* 打开成功继续,打开失败 返回
+* 循环获取到输入目录下的文件路径 curFilePath
+* 如果传入参数searchSubDir为真，则递归搜索当前目录调用getFiles(curFilePath, files, searchSubDir)
+* 添加当前文件路径curFilePath到容器中
+* 关闭输入目录文件
 * 结束 返回
 
 ----
@@ -107,7 +104,8 @@ void getFiles(const std::string &basePath, std::vector<std::string > &files,cons
 
 ---
 
-####最后写一个main函数来测试一下，改程序将执行以下操作
+最后写一个main函数来测试一下，改程序将执行以下操作
+
 * 输入程序的第一个参数作为搜索目录 将获取到的目录存放到事先定义好的容器（vector<std::string>对象）中
 * 将获取到的容器元素输入到标准输出流
 
@@ -151,10 +149,6 @@ $ ./main.cpp
 {% endhighlight %}
 
 通过测试显示：getFiles函数在Mac OSX 、Win32、Linux(仅在Linux Mint 17中测试过)、 Android[^1]、 iOS[^2]均可获取到指定目录的文件路径。
-
-_本文涉及的代码均已托管到[Github/Geequlim/ConsoleTools][github]上，欢迎提交您的代码。_
-[github]:https://github.com/Geequlim/ConsoleTools/tree/master/DirectoryListor/src "ConsoleTools"
-
 
 ---
 

@@ -4972,6 +4972,18 @@ button.close {
 	list-style:none;
 	text-align:center
 }
+.carousel-indicatorss {
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	z-index:15;
+	width:60%;
+	margin-left:-30%;
+	padding-left:0;
+	list-style:none;
+	text-align:center
+	background:#222
+}
 .carousel-indicators li {
 	display:inline-block;
 	width:10px;

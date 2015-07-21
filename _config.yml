@@ -1,8 +1,10 @@
 encoding: UTF-8
 permalink: /:year/:month/:day/:title.html
 paginate: 5
+# markdown: redcarpet
 markdown: kramdown
 highlighter: pygments
+pygments: true
 
 kramdown:
   input: GFM
@@ -37,7 +39,7 @@ profile_desc : Geequlim
 
 # 首页除了最新文章外显示分类
 cates:
-- Essay
+- 技术
 # - Python
 # - OpenStack
 
