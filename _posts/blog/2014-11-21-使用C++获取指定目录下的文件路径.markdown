@@ -2,7 +2,11 @@
 layout: post
 title: 使用C++获取指定目录下的文件路径
 category: 技术
-tags: C++ I/O
+tags: C/C++ I/O
+previousTitle: ''
+previousUrl: ''
+nextTitle: ''
+nextUrl: ''
 description:
 ---
 

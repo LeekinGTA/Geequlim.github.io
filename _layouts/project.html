@@ -97,7 +97,7 @@ layout: default
                       <tr>
                         <td>链接</td>
                         <td>
-                        {% if project.link == '无' %}
+                        {% if project.link == '' %}
                         <span class="label label-default">暂无</span>
                         {% else %}
                         <a class="label label-success" href="{{ project.link }}" title="{{ project.link }}">点击查看</a>

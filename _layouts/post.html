@@ -11,8 +11,33 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
-  
+
+  <!-- 项目简介文本 -->
+  <br/>
+  <div class="row">
+    <div class="col-md-12 col-xs-12">
+      <table class="table">
+        <tbody>
+          <tr>
+            {% if page.previousTitle == '' %}
+            {% else %}
+            <td class="col-md-6" >
+              <a class="label label-info" href="{{page.previousUrl}}">上一篇：{{page.previousTitle}}</a>
+            </td>
+            {% endif %}
+            {% if page.nextTitle == '' %}
+            {% else %}
+            <td class="col-md-6" >
+              <a class="label label-info" href="{{page.nextUrl}}">下一篇：{{page.nextTitle}}</a>
+            </td>
+            {% endif %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   {% include share.html %}
   {% include duoshuo.html %}
-  
+
 </div>
