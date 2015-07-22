@@ -11,12 +11,10 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
-
   <!-- 项目简介文本 -->
-  <br/>
   <div class="row">
     <div class="col-md-12 col-xs-12">
-      <table class="table">
+      <table >
         <tbody>
           <tr>
             {% if page.previousTitle == '' %}
@@ -25,15 +23,19 @@ layout: default
               <a class="label label-info" href="{{page.previousUrl}}">上一篇：{{page.previousTitle}}</a>
             </td>
             {% endif %}
+            </tr>
+            <tr>
             {% if page.nextTitle == '' %}
             {% else %}
             <td class="col-md-6" >
+              <br/>
               <a class="label label-info" href="{{page.nextUrl}}">下一篇：{{page.nextTitle}}</a>
             </td>
             {% endif %}
           </tr>
         </tbody>
       </table>
+      <br/>
     </div>
   </div>
 
