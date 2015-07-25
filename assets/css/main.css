@@ -1028,9 +1028,9 @@ a.profile_gavatar .circle{
 pre {
   padding: 1em;
   font: .9em/1.5 Consolas, Monaco, 'Andale Mono', monospace;
-  border: 3px solid #304047;
-  border-radius: 6px;
-  background-color: #eaeaea;
+  border: 3px solid #bbb;
+  border-radius: 8px;
+  background-color: #274d62;
   background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
   background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
   background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);

@@ -3,8 +3,8 @@ permalink: /:year/:month/:day/:title.html
 paginate: 5
 # markdown: redcarpet
 markdown: kramdown
+
 highlighter: pygments
-pygments: true
 
 kramdown:
   input: GFM
