@@ -14,8 +14,8 @@ permalink: /pages/tags.html
 
 <div>
 	{% for tag in site.tags %}
-	<div class="target-fix" id = "{{tag[0]}}" name="{{tag[0]}}">
-		<h1 class="tag-name" >{{tag[0]}}</h1>
+	<div class="blue_box" id = "{{tag[0]}}" name="{{tag[0]}}">
+		<h3 class="blue_title" >{{tag[0]}}</h3>
 		<div class="tags">
 			{% for post in tag[1] %}
 				<div class="article">

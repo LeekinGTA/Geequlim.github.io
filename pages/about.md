@@ -6,21 +6,23 @@ permalink: /pages/about.html
 
 <div class="about">
 
-	<h3>关于Geequlim</h3>
+	<h2>关于Geequlim</h2>
 	<hr>
 	<br/>
-	<h4>
-	爱探索，爱折腾，更爱编程。
-	</h4>
+
+	<div class="green_box">
+		<p class="green_title">爱探索，爱折腾，更爱编程。</p>
+		<p class="box_content">
+		 Geequlim是一个成长中的极客，现就读于云南财经大学，正在学习C/C++编程语言和计算机图形学、工商管理。
+		</p>
+	</div>
+
 	<br/>
-	<p>
-	Geequlim是一个成长中的极客，现就读于云南财经大学，正在学习C/C++编程语言和计算机图形学、工商管理。
-	</p>
-	<br>
 
+	<img class="post_center_img" src="/assets/img/about.jpg"/>
 
 	<br>
-	<h3>基本信息</h3>
+	<h3 class="orange_title">基本信息</h3>
 	<hr>
 	<table class="table table-striped">
 		<tr>
@@ -38,13 +40,13 @@ permalink: /pages/about.html
 	</table>
 
 	<br>
-	<h3>联系方式</h3>
+	<h3 class="orange_title">联系方式</h3>
 	<hr>
 	<table class="table table-striped">
 		<tr>
 			<td>
 				Email：
-			</td>  
+			</td>
 			<td>
 				geequlim@gmail.com
 			</td>
@@ -53,10 +55,10 @@ permalink: /pages/about.html
 		<tr>
 			<td>
 				github：
-			</td>  
+			</td>
 			<td>
 				<a href="{{ site.author.github }}" target="_blank">https://github.com/Geequlim</a>
-			</td>  
+			</td>
 		</tr>
 
 		<tr>
@@ -71,14 +73,14 @@ permalink: /pages/about.html
 
 
 	<br>
-	<h3>个人简介</h3>
+	<h3 class="orange_title">个人简介</h3>
 	<hr>
 	<p>
 一介码夫。
 	</p>
 	<br>
 
-	<h3>座右铭</h3>
+	<h3 class="orange_title">座右铭</h3>
 	<hr>
 	<p>
 	生命不止 折腾不休

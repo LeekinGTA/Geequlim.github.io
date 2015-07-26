@@ -46,10 +46,10 @@
 .blue_box{
   display: block;
   margin: 8px;
-  background-color: #afdceb;
+  background-color: #def4ff;
   color: #444;
   border-radius: 5px;
-  border: 2px solid #2181a5;
+  border: 2px solid #55b2e0;
 }
 
 .blue_title{
@@ -57,11 +57,11 @@
   padding: 8px;
   padding-top: 3px;
   padding-bottom: 3px;
-  background-color: #3189c0;
+  background-color: #0f94d7;
   color: #eee;
   border-radius: 3px;
-  border-bottom: 2px solid #165586;
-  border-right: 1px solid #165586;
+  border-bottom: 2px solid #2db1f3;
+  border-right: 1px solid #2db1f3;
 }
 
 .orange_box{
@@ -104,6 +104,27 @@
   border-radius: 3px;
   border-bottom: 2px solid #901b8f;
   border-right: 1px solid #901b8f;
+}
+
+.brown_box
+{
+  display: block;
+  margin: 8px;
+  background-color: #c9ae92;
+  color: #444;
+  border-radius: 5px;
+  border: 2px solid #955e20;
+}
+.brown_title{
+  display: block;
+  padding: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #73534c;
+  color: #eee;
+  border-radius: 3px;
+  border-bottom: 2px solid #5d5044;
+  border-right: 1px solid #5d5044;
 }
 
 .post_center_img{

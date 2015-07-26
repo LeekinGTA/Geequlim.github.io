@@ -5,8 +5,8 @@ category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
 previousTitle: '[第01章]入门：02 创建窗口'
 previousUrl: '/2015/07/26/%2002%20Creating%20a%20window.html'
-nextTitle: ''
-nextUrl: ''
+nextTitle: '[第01章]入门：04 你好，三角形'
+nextUrl: '/2015/07/26/%2004%20Hello%20Triangle.html'
 description:
 ---
 
