@@ -982,9 +982,11 @@ a.profile_gavatar .circle{
 
 .post-content {
   letter-spacing: 1px;
-  font-size : 1em;
-  line-height : 30px;
-  margin-bottom: 3em; }
+  font-size: 15px;
+  line-height : 24px;
+  margin-bottom: 2em;
+  color: #444
+ }
   .post-content h2 {
     font-size: 32px; }
     @media screen and (max-width: 800px) {
@@ -1030,6 +1032,8 @@ pre {
   font: .9em/1.5 Consolas, Monaco, 'Andale Mono', monospace;
   border: 3px solid #bbb;
   border-radius: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
   background-color: #274d62;
   background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
   background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);

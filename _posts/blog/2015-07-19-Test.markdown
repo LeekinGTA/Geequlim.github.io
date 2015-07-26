@@ -1,0 +1,56 @@
+---
+layout: post
+title: Test
+category: 技术
+tags: 脚本语言 Lua
+previousTitle: ''
+previousUrl: ''
+nextTitle: ''
+nextUrl: ''
+description:
+---
+
+本文转自 [**X分钟速成Y**](http://learnxinyminutes.com/docs/zh-cn/lua-cn/)
+
+---
+
+<div class="green_box">
+<p class="green_title">Note</p>
+<p class="box_content">由于大多数实现都是由显卡厂商编写的，当产生一个bug时通常可以通过升级显卡驱动来解决。这些驱动会包括你的显卡能支持的最新版本的OpenGL，这也是为什么总是建议你偶尔更新一下显卡驱动。</p>
+</div>
+
+<div class="red_box">
+<p class="red_title">Note</p>
+<p class="box_content">由于大多数实现都是由显卡厂商编写的，当产生一个bug时通常可以通过升级显卡驱动来解决。这些驱动会包括你的显卡能支持的最新版本的OpenGL，这也是为什么总是建议你偶尔更新一下显卡驱动。</p>
+</div>
+
+<div class="blue_box">
+<p class="blue_title">Note</p>
+<p class="box_content">由于大多数实现都是由显卡厂商编写的，当产生一个bug时通常可以通过升级显卡驱动来解决。这些驱动会包括你的显卡能支持的最新版本的OpenGL，这也是为什么总是建议你偶尔更新一下显卡驱动。</p>
+</div>
+
+<div class="orange_box">
+<p class="orange_title">Note</p>
+<p class="box_content">由于大多数实现都是由显卡厂商编写的，当产生一个bug时通常可以通过升级显卡驱动来解决。这些驱动会包括你的显卡能支持的最新版本的OpenGL，这也是为什么总是建议你偶尔更新一下显卡驱动。</p>
+</div>
+
+<div class="purple_box">
+<p class="purple_title">Note</p>
+<p class="box_content">由于大多数实现都是由显卡厂商编写的，当产生一个bug时通常可以通过升级显卡驱动来解决。这些驱动会包括你的显卡能支持的最新版本的OpenGL，这也是为什么总是建议你偶尔更新一下显卡驱动。</p>
+</div>
+
+{% highlight glsl linenos%}
+#version 330 core
+layout (location = 0) in vec3 position; // The position variable has attribute position 0
+
+out vec4 vertexColor; // Specify a color output to the fragment shader
+
+void main()
+{
+    gl_Position = vec4(position, 1.0); // See how we directly give a vec3 to vec4's constructor
+    vertexColor = vec4(0.5f, 0.0f, 0.0f, 1.0f); // Set the output variable to a dark-red color
+}
+{% endhighlight %}
+
+
+$$\begin{bmatrix} E_{1x} & E_{1y} & E_{1z} \\ E_{2x} & E_{2y} & E_{2z} \end{bmatrix} = \begin{bmatrix} \Delta U_1 & \Delta V_1 \\ \Delta U_2 & \Delta V_2 \end{bmatrix} \begin{bmatrix} T_x & T_y & T_z \\ B_x & B_y & B_z \end{bmatrix}$$
