@@ -134,3 +134,10 @@
   border-radius: 7px;
   border: 3px solid #bbb;
 }
+
+.post_center_img_noborder{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+}

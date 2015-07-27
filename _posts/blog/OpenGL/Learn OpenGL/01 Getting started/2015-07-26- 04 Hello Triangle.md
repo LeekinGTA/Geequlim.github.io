@@ -1,12 +1,12 @@
 ---
 layout: post
-title: '[第01章]入门：04 你好，三角形'
+title: '[第01章 入门] 04 你好，三角形'
 category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
-previousTitle: '[第01章]入门：03 你好，窗口'
+previousTitle: '[第01章 入门] 03 你好，窗口'
 previousUrl: '/2015/07/26/%2003%20Hello%20Window.html'
-nextTitle: ''
-nextUrl: ''
+nextTitle: '[第01章 入门] 05 着色器'
+nextUrl: '/2015/07/27/%2005%20Shaders.html'
 description:
 ---
 
@@ -35,7 +35,7 @@ description:
 
 在下面，你会看到一个图形渲染管线的每个阶段的抽象表达。要注意蓝色部分代表的是我们可以自定义的着色器。
 
-<img class="post_center_img" src="/assets/img/blog/LearnOpenGL/01 Getting started/OpenGL_pipline_cn.png"/>
+<img class="box_content" src="/assets/img/blog/LearnOpenGL/01 Getting started/OpenGL_pipline_cn.png"/>
 
 如你所见，图形渲染管线包含很多部分，每个都是将你的顶点数据转变为最后渲染出来的像素这个大过程中的一个特定阶段。我们会概括性地解释渲染管线的每个部分，从而使你对图形渲染管线的工作方式有个大概了解。
 
@@ -112,7 +112,7 @@ GLfloat vertices[] = {
 	 一旦你的顶点坐标已经在顶点着色器中处理过，它们就应该是<strong>标准化设备坐标</strong>了，标准化设备坐标是一个x、y和z值在-1.0到1.0的一小段空间。任何落在范围外的坐标都会被丢弃/裁剪，不会显示在你的屏幕上。下面你会看到我们定义的在标准化设备坐标中的三角形（忽略z轴）：
    <br/>
    <br/>
-   <img class="post_center_img" src="http://www.learnopengl.com/img/getting-started/ndc.png"/>
+   <img class="post_center_img_noborder" src="http://www.learnopengl.com/img/getting-started/ndc.png"/>
    <br/>
    与通常的屏幕坐标不同，y轴正方向上的点和（0,0）坐标是这个图像的中心，而不是左上角。最后你希望所有（变换过的）坐标都在这个坐标空间中，否则它们就不可见了。
    <br/>
@@ -340,7 +340,7 @@ glDeleteShader(fragmentShader);
 
 我们的顶点缓冲数据被格式化为下面的形式：
 
-<img class="post_center_img" src="http://learnopengl.com/img/getting-started/vertex_attribute_pointer.png"/>
+<img class="post_center_img_noborder" src="http://learnopengl.com/img/getting-started/vertex_attribute_pointer.png"/>
 
 - 位置数据被储存为32-bit（4 byte）浮点值。
 - 每个位置包含3个这样的值。
@@ -408,7 +408,7 @@ someOpenGLFunctionThatDrawsOurTriangle();
 - 使用`glVertexAttribPointer`的顶点属性配置。
 - 使用`glVertexAttribPointer`进行的顶点缓冲对象与顶点属性链接。
 
-<img class="post_center_img" src="http://learnopengl.com/img/getting-started/vertex_array_objects.png"/>
+<img class="post_center_img_noborder" src="http://learnopengl.com/img/getting-started/vertex_array_objects.png"/>
 
 
 生成一个VAO和生成VBO类似：
@@ -548,7 +548,7 @@ glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 `glDrawElements`函数从当前绑定到`GL_ELEMENT_ARRAY_BUFFER`目标的EBO获取索引。这意味着我们必须在每次要用索引渲染一个物体时绑定相应的EBO，这还是有点麻烦。不过顶点数组对象仍可以保存索引缓冲对象的绑定状态。VAO绑定之后可以索引缓冲对象，EBO就成为了VAO的索引缓冲对象。再次绑定VAO的同时也会自动绑定EBO。
 
-<img class="post_center_img" src="http://learnopengl.com/img/getting-started/vertex_array_objects_ebo.png"/>
+<img class="post_center_img_noborder" src="http://learnopengl.com/img/getting-started/vertex_array_objects_ebo.png"/>
 
 <div class="green_box">
 	<p class="box_content">

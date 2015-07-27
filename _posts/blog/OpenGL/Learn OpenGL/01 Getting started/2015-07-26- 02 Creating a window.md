@@ -1,11 +1,11 @@
 ---
 layout: post
-title: '[第01章]入门：02 创建窗口'
+title: '[第01章 入门] 02 创建窗口'
 category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
-previousTitle: '[第01章]入门：01 OpenGL (Open Graphics Library)'
+previousTitle: '[第01章 入门] 01 OpenGL'
 previousUrl: '/2015/07/26/%2001%20OpenGL.html'
-nextTitle: '[第01章]入门：03 你好，窗口'
+nextTitle: '[第01章 入门] 03 你好，窗口'
 nextUrl: '/2015/07/26/%2003%20Hello%20Window.html'
 description:
 ---
