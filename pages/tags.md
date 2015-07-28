@@ -16,13 +16,16 @@ permalink: /pages/tags.html
 	{% for tag in site.tags %}
 	<div class="blue_box" id = "{{tag[0]}}" name="{{tag[0]}}">
 		<h3 class="blue_title" >{{tag[0]}}</h3>
+		<div class="box_content">
 		<div class="tags">
 			{% for post in tag[1] %}
 				<div class="article">
-					<span class="datetime">{{ post.date | date:"%Y-%m-%d" }} </span>&raquo;
-					<a href="{{ post.url }}">{{ post.title }}</a>
+					<a href="{{ post.url }}">{{ post.title }} </a>
+					&nbsp;&nbsp;
+					<p class="badge">{{ post.date | date:"%Y年%m月%d日" }} </p>
 				</div>
 			{% endfor %}
+		</div>
 		</div>
 	</div>
 	{% endfor %}

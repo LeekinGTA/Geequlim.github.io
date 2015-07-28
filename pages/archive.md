@@ -11,23 +11,25 @@ permalink: /pages/archive.html
 	    {% capture next_month %}{{ post.previous.date | date: "%m" }}{% endcapture %}
 
 	    {% if forloop.first %}
-	      <legend id="{{this_year}}-{{this_month}}" class="orange_title">{{this_year}}年-{{this_month}}月</legend>
+	      <legend id="{{this_year}}-{{this_month}}" class="orange_title">{{this_year}}年{{this_month}}月</legend>
 	      <ul>
 	    {% endif %}
-	    <li class="archive_span"><span>{{ post.date | date: "%Y年-%m月-%d日" }}</span> &raquo;
+			<div class="box_content">
+	    <li class="archive_span"><span>{{ post.date | date: "%Y年%m月%d日" }}</span> &raquo;
 	      <a href="{{ post.url }}">{{ post.title }}</a>
 	    </li>
+			</div>
 	    {% if forloop.last %}
 	      </ul>
 	    {% else %}
 	      {% if this_year != next_year %}
 	        </ul>
-	        <legend id="{{next_year}}-{{next_month}}" class="brown_title">{{next_year}}年-{{next_month}}月</legend>
+	        <legend id="{{next_year}}-{{next_month}}" class="brown_title">{{next_year}}年{{next_month}}月</legend>
 	        <ul>
 	      {% else %}
 	        {% if this_month != next_month %}
 	        </ul>
-	        <legend id="{{next_year}}-{{next_month}}" class="blue_title">{{next_year}}年-{{next_month}}月</legend>
+	        <legend id="{{next_year}}-{{next_month}}" class="blue_title">{{next_year}}年{{next_month}}月</legend>
 	        <ul>
 	        {% endif %}
 	      {% endif %}

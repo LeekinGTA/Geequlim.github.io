@@ -412,12 +412,12 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
+  max-width: -webkit-calc(1280px - (30px * 2));
+  max-width: calc(1280px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
+  padding-right: 20px;
+  padding-left: 20px; }
   @media screen and (max-width: 800px) {
     .wrapper {
       max-width: -webkit-calc(800px - (30px));
@@ -865,7 +865,7 @@ a.profile_gavatar .circle{
 }
 @media (min-width: 992px) {
 	.page-content {
-	margin-left : 25%;}
+	margin-left : 24.5%;}
 }
 
 .page-heading {
