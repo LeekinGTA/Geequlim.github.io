@@ -1,41 +1,39 @@
 <footer class="site-footer">
 
   <div class="wrapper">
+    <strong><h2 class="footer-heading">{{ site.author.name }}'s blog</h2></strong>
 
-    <h2 class="footer-heading">{{ site.author.name }}'s blog</h2>
-
-    <div class="footer-col-wrapper">
+    <table class="table">
+      <tr>
+        <td class="center"><a href="{{ site.rss_url }}" target="_blank"><i class="fa fa-rss fa-2x"></i></a></td>
+        <td class="center"><a href="{{ site.author.github }}" target="_blank"><i class="fa fa-github fa-2x"></i></a></td>
+        <td class="center"><a href="{{ site.author.weibo }}" target="_blank"><i class="fa fa-weibo fa-2x"></i></a></td>
+        <td class="center"></a></td>
+        <td class="center"><a href="mailto:{{ site.author.email }}" target="_blank"><img class="fa" src="/assets/img/ic_email.png"></img></a></td>
+      </tr>
+    </table>
+<!--
+    <div class="footer-col  footer-col-3">
+      <p class="text">{{ site.description }}</p>
+      <div class="address">
+          <h5><span class="fa fa-map-marker"></span> Kunming Yunnan, China</h5>
+      </div>
+    </div>
+ -->
+    <!-- <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.author.name }}</li>
+          <li><a href="{{ site.author.link }}">{{ site.author.link }}</a></li>
+          <br/>
           <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
         </ul>
       </div>
+    </div> -->
 
-      <div class="footer-col  footer-col-2">
-        <ul class="social-media-list">
-          {% if site.author.github_username %}
-          <li>
-            <a href="https://github.com/{{ site.author.github_username }}">
-              <i class="fa fa-github"></i>
-            </a>
-          </li>
-          {% endif %}
-
-          {% if site.author.weibo %}
-          <li>
-            <a href="{{ site.author.weibo }}">
-               <i class="fa fa-weibo"></i>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
-      </div>
+    <div class="center sitedesc">
+    	<h5><span class="fa fa-map-marker"></span> Kunming Yunnan, China</h5>
     </div>
+    <br/>
     <div class="center sitedesc">
     	Powered by <a href ="http://jekyllrb.com/">Jekyll</a>  |  Theme by <a href ="https://github.com/BladeMasterCoder/BladeMasterCoder.github.io">BladeMasterCoder</a>  |  Hosted on <a href="{{site.author.github}}">Github</a>
     </div>
@@ -48,13 +46,13 @@
   <script type="text/javascript" src="/assets/js/prettify/prettify.js"></script>
 
   <script type="text/javascript">
-    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
-    _st('install','5n_k9F1p4SyfWB_z5fsV','2.0.0');
-  </script>
+  _st('install','5n_k9F1p4SyfWB_z5fsV','2.0.0');
+</script>
 
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
