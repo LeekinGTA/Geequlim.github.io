@@ -3,8 +3,8 @@ layout: post
 title: '[第01章 入门] 07 变换'
 category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
-previousTitle: '[第01章 入门] 05 着色器'
-previousUrl: '/2015/07/27/%2005%20Shaders.html'
+previousTitle: '[第01章 入门] 06 纹理'
+previousUrl: '/2015/07/27/%2006%20Textures.html'
 nextTitle: ''
 nextUrl: ''
 description:
