@@ -5,8 +5,8 @@ category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
 previousTitle: '[第01章 入门] 06 纹理'
 previousUrl: '/2015/07/27/%2006%20Textures.html'
-nextTitle: ''
-nextUrl: ''
+nextTitle: '[第01章 入门] 08 坐标系统'
+nextUrl: '/2015/07/29/%2008%20Coordinate%20Systems.html'
 description:
 ---
 原文   | [Transformations](http://learnopengl.com/#!Getting-started/Transformations)
