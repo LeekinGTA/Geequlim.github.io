@@ -16,7 +16,7 @@ layout: default
       {% for project in page.projects %}
         <div class="col-md-12 target-fix">
           <div class="panel panel-primary">
-            <div class="panel-heading" id="{{ project.title }}" name = "{{ project.title }}">{{ project.title }}</div>
+            <div class="panel-heading center" id="{{ project.title }}" name = "{{ project.title }}">{{ project.title }}</div>
             <div class="panel-body">
 
               <!-- 显示项目信息表 -->
@@ -111,29 +111,56 @@ layout: default
                   </table>
                 </div>
               </div>
+              <br>
 
               <!-- 项目简介文本 -->
               <br/>
+              {% if project.description %}
               <div class="row">
                 <div class="col-md-12 col-xs-12">
                   <table class="table table-bordered">
                     <tbody>
                       <tr>
-                        <td class="col-md-12" >介绍</td>
+                        <td class="col-md-12 center" ><strong>介绍</strong></td>
                       </tr>
                       <tr><td>{{ project.description }}</td></tr>
                     </tbody>
                   </table>
                 </div>
               </div>
+              {% endif %}
+              <br>
 
-              <!-- 截图信息 -->
+              <!-- 视频信息 -->
+              {% if project.videos %}
               <div class="row">
                 <div class="col-md-12 col-xs-12">
                   <table class="table table-bordered">
                     <tbody>
                       <tr>
-                        <td class="col-md-12" >截图</td>
+                        <td class="col-md-12 center"  ><strong>视频</strong></td>
+                      </tr>
+                        {% for video in project.videos %}
+                        <tr><td>{{video.title}}</td></tr>
+                        <tr><td>
+                          <video class="post_center_img center" width="98%" src={{video.url}} controls="controls"></video>
+                        </td></tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {% endif %}
+              <br>
+
+              <!-- 截图信息 -->
+              {% if project.screenshots %}
+              <div class="row">
+                <div class="col-md-12 col-xs-12">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <td class="col-md-12 center" ><strong>截图</strong></td>
                       </tr>
                       <tr>
                         {% for screenshot in project.screenshots %}
@@ -146,6 +173,7 @@ layout: default
                   </table>
                 </div>
               </div>
+              {% endif %}
 
             </div>
           </div>

@@ -27,7 +27,6 @@ projects:
       - title: ''
         url: ''
       description: 一款方便实用的菜单设计工具。
-
       screenshots:
         - url: '/assets/img/project/MenuDesigner/pic0.png'
         - url: '/assets/img/project/MenuDesigner/pic1.png'
