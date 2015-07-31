@@ -59,7 +59,7 @@ void main()
 
 作为结果的`lightDir`向量被使用在`diffuse`和`specular`计算之前。
 
-为了清晰地强调一个定向光对所有物体都有同样的影响，我们再次访问[坐标系教程](http://learnopengl-cn.readthedocs.org/zh/latest/01%20Getting%20started/08%20Coordinate%20Systems/)结尾部分的箱子场景。例子里我们先定义10个不同的箱子位置，为每个箱子生成不同的模型矩阵，每个模型矩阵包含相应的本地到世界变换：
+为了清晰地强调一个定向光对所有物体都有同样的影响，我们再次访问[坐标系教程](/2015/07/29/%2008%20Coordinate%20Systems.html)结尾部分的箱子场景。例子里我们先定义10个不同的箱子位置，为每个箱子生成不同的模型矩阵，每个模型矩阵包含相应的本地到世界变换：
 
 {% highlight glsl %}
 for(GLuint i = 0; i < 10; i++)
