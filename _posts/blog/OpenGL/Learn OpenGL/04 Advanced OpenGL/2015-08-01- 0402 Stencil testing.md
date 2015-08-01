@@ -9,7 +9,6 @@ nextTitle: ''
 nextUrl: ''
 description:
 ---
-# 模板测试(Stencil testing)
 
 原文     | [Stencil testing](http://learnopengl.com/#!Advanced-OpenGL/Stencil-testing)
       ---|---
