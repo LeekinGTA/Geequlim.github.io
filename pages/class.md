@@ -6,6 +6,7 @@ permalink: /pages/categories.html
 <div>
 
 	{% for category in site.categories %}
+		{% if category[0] != '作品' %}
 		<div class="col-md-12">
 	      		<div class="panel panel-primary">
 	        			<div class="panel-heading center" id="{{ category[0] }}" name="{{ category[0] }}">{{ category[0] }}</div>
@@ -17,6 +18,7 @@ permalink: /pages/categories.html
 			               {% endfor %}
 			</div>
 		</div>
+	 {% endif %}
 	{% endfor %}
 
 </div>
