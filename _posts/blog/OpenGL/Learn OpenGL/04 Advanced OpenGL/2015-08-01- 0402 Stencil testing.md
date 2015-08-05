@@ -5,8 +5,8 @@ category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
 previousTitle: '[第04章 进阶] 01 深度测试'
 previousUrl: '/2015/08/01/%200401%20Depth%20testing.html'
-nextTitle: ''
-nextUrl: ''
+nextTitle: '[第04章 进阶] 03 混合'
+nextUrl: '/2015/08/05/%2003%20Blending.html'
 description:
 ---
 
