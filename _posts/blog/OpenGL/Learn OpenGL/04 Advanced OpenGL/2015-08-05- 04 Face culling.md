@@ -5,8 +5,8 @@ category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
 previousTitle: '[第04章 进阶] 03 混合'
 previousUrl: '/2015/08/05/%2003%20Blending.html'
-nextTitle: ''
-nextUrl: ''
+nextTitle: '[第04章 进阶] 05 帧缓冲'
+nextUrl: '/2015/08/06/%2005%20Framebuffers.html'
 description:
 ---
 

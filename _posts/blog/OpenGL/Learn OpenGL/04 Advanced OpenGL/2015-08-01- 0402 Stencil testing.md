@@ -79,7 +79,7 @@ glStencilMask(0x00);
 
 `void glStencilFunc(GLenum func, GLint ref, GLuint mask)`函数有三个参数：
 
-* **func**：设置模板测试操作。这个测试操作应用到已经储存的模板值和`glStencilFunc`的`ref`值上，可用的选项是：`GL_NEVER`、`GL_LEQUAL`、`GL_GREATER`、`GL_GEQUAL`、`GL_EQUAL`、`GL_NOTEQUAL`、`GL_ALWAYS`。它们的语义和深度缓冲的相似。
+* **func**：设置模板测试操作。这个测试操作应用到已经储存的模板值和`glStencilFunc`的`ref`值上，可用的选项是： `GL_NEVER`、 `GL_LEQUAL`、 `GL_GREATER`、 `GL_GEQUAL`、 `GL_EQUAL`、 `GL_NOTEQUAL`、 `GL_ALWAYS`。它们的语义和深度缓冲的相似。
 * **ref**：指定模板测试的引用值。模板缓冲的内容会与这个值对比。
 * **mask**：指定一个遮罩，在模板测试对比引用值和储存的模板值前，对它们进行按位与（and）操作，初始设置为1。
 
