@@ -5,8 +5,8 @@ category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
 previousTitle: '[第04章 进阶] 04 面剔除'
 previousUrl: '/2015/08/05/%2004%20Face%20culling.html'
-nextTitle: ''
-nextUrl: ''
+nextTitle: '[第04章 进阶] 06 天空盒'
+nextUrl: '/2015/08/07/%2006%20Cubemaps.html'
 description:
 ---
 
