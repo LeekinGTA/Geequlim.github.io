@@ -5,8 +5,8 @@ category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
 previousTitle: '[第04章 进阶] 07 高级数据'
 previousUrl: '/2015/08/08/%2007%20Advanced%20Data.html'
-nextTitle: ''
-nextUrl: ''
+nextTitle: '[第04章 进阶] 09 几何着色器'
+nextUrl: '/2015/08/09/%2009%20Geometry%20Shader.html'
 description:
 ---
 
