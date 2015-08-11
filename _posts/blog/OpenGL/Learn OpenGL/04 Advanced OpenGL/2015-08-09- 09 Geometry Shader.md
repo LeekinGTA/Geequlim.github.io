@@ -5,8 +5,8 @@ category: 'Learn OpenGL'
 tags: 'LearnOpenGL'
 previousTitle: '[第04章 进阶] 08 GLSL进阶'
 previousUrl: '/2015/08/08/%2008%20Advanced%20GLSL.html'
-nextTitle: ''
-nextUrl: ''
+nextTitle: '[第04章 进阶] 10 实例化'
+nextUrl: '/2015/08/11/%2010%20Instancing.html'
 description:
 ---
 
