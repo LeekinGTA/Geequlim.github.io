@@ -37,7 +37,7 @@ layout: default
 			    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-right:5px;">上一页</span></a>
 			  {% endif %}
 
-        <span class="active_page x1">{{ paginator }}</span>
+        <span class="active_page x1">{{ paginator.page }}</span>
 
 			  {% if paginator.next_page %}
 			   	 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-left:5px;">下一页 </span></a>
