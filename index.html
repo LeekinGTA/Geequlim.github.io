@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">全部文章</h1>
+  <h1 class="page-heading">最近文章</h1>
 
    {% for post in paginator.posts %}
 	<div class="row">
@@ -42,8 +42,8 @@ layout: default
 				      <span class="active_page x1">{{ page }}</span>
 				    {% elsif page == 1 %}
 				      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1">{{ page }}</span></a>
-				    {% else %}
-				      <a href="/page{{page}}"><span class="x1">{{ page }}</span></a>
+				    <!-- {% else %}
+				      <a href="/page{{page}}"><span class="x1">{{ page }}</span></a> -->
 				    {% endif %}
 			  {% endfor %}
 
@@ -52,6 +52,6 @@ layout: default
 			  {% endif %}
 		</div>
 	{% endif %}
-  <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">使用RSS订阅</a></p>
+  <!-- <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">使用RSS订阅</a></p> -->
 
 </div>
