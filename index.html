@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">最近发表</h1>
+  <h1 class="page-heading">最近文章</h1>
 
    {% for post in paginator.posts %}
 	<div class="row">
@@ -36,9 +36,7 @@ layout: default
 			  {% if paginator.previous_page %}
 			    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-right:5px;">上一页</span></a>
 			  {% endif %}
-
-        <span class="active_page x1">{{ paginator.page }}</span>
-
+        <span class="active_page x1">第{{ paginator.page }}页</span>
 			  {% if paginator.next_page %}
 			   	 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="x1" style="margin-left:5px;">下一页 </span></a>
 			  {% endif %}
