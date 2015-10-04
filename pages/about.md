@@ -8,7 +8,7 @@ permalink: /pages/about.html
 
 	<h1>关于Geequlim</h1>
 	<hr>
-	<h4 align="right">生命不止 折腾不休</h4>
+	<h4 align="right">业精于勤，荒于嬉；行成于思，毁于随。</h4>
 	<br/>
 	<div class="green_box">
 		<h3 class="green_title">爱探索，爱折腾，更爱编程。</h3>
