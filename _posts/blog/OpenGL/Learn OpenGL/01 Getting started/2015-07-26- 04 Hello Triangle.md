@@ -304,7 +304,7 @@ glLinkProgram(shaderProgram);
 <div class="green_box">
 	<p class="green_title">提示</p>
 	<p class="box_content">
-    就像着色器的编译一样，我们也可以检验链接着色器程序是否失败，获得相应的日志。与glGetShaderiv和glGetShaderInfoLog不同，现在我们使用：
+    就像着色器的编译一样，我们也可以检验链接着色器程序是否失败，获得相应的日志。与<code>glGetShaderiv</code>和<code>glGetShaderInfoLog</code>不同，现在我们使用：
     <figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">glGetProgramiv</span><span class="p">(</span><span class="n">shaderProgram</span><span class="p">,</span> <span class="n">GL_LINK_STATUS</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">success</span><span class="p">);</span>
 <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">success</span><span class="p">)</span> <span class="p">{</span>
   	<span class="n">glGetProgramInfoLog</span><span class="p">(</span><span class="n">shaderProgram</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">infoLog</span><span class="p">);</span>

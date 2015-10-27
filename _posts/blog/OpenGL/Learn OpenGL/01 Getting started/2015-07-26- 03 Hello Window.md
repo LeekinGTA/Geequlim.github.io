@@ -50,7 +50,7 @@ int main()
 }
 {% endhighlight %}
 
-首先我们在main函数中调用glfwInit函数来初始化GLFW，然后我们可以使用glfwWindowHint函数来配置GLFW。glfwWindowHint函数的第一个参数表示我们要进行什么样的配置，我们可以选择大量以“GLFW\_”开头的枚举值；第二个参数接受一个整形，用来设置这个配置的值。该函数的所有的选项以及对应的值都可以在 [GLFW's window handling](http://www.glfw.org/docs/latest/window.html#window_hints)这篇文档中找到。如果你现在编译你的cpp文件会得到大量的连接错误，这是因为你还需要进一步设置GLFW。
+首先我们在`main`函数中调用`glfwInit`函数来初始化GLFW，然后我们可以使用`glfwWindowHint`函数来配置GLFW。`glfwWindowHint`函数的第一个参数表示我们要进行什么样的配置，我们可以选择大量以“GLFW\_”开头的枚举值；第二个参数接受一个整形，用来设置这个配置的值。该函数的所有的选项以及对应的值都可以在 [GLFW's window handling](http://www.glfw.org/docs/latest/window.html#window_hints)这篇文档中找到。如果你现在编译你的cpp文件会得到大量的连接错误，这是因为你还需要进一步设置GLFW。
 
 由于本站的教程都是基于OpenGL3.3以后的版本展开讨论的，所以我们需要告诉GLFW我们要使用的OpenGL版本是3.3，这样GLFW会在创建OpenGL上下文时做出适当的调整。这也可以确保用户在没有适当的OpenGL版本支持的情况下无法运行。在这里我们告诉GLFW想要的OpenGL版本号是3.3，并且不允许用户调整窗口的大小。我们明确地告诉GLFW我们想要使用核心模式（core-profile），这将导致我们无法使用那些已经废弃的API，而这不正是一个很好的提醒吗？当我们不小心用了旧功能时报错，就能避免使用一些被废弃的用法了。如果你使用的是Mac OSX系统你还需要加下面这行代码这些配置才能起作用：
 
@@ -80,7 +80,7 @@ glfwMakeContextCurrent(window);
 {% endhighlight %}
 
 
-glfwCreateWindow函数需要窗口的宽和高作为它的前两个参数；第三个参数表示只这个窗口的名称（标题），这里我们使用"LearnOpenGL"，当然你可以使用你喜欢的名称；最后两个参数我们暂时忽略，先置为空指针就行。它的返回值GLFWwindow对象的指针会在其他的GLFW操作中使用到。创建完窗口我们就可以通知GLFW给我们的窗口在当前的线程中创建我们等待已久的OpenGL上下文了。
+`glfwCreateWindow`函数需要窗口的宽和高作为它的前两个参数；第三个参数表示只这个窗口的名称（标题），这里我们使用"LearnOpenGL"，当然你可以使用你喜欢的名称；最后两个参数我们暂时忽略，先置为空指针就行。它的返回值GLFWwindow对象的指针会在其他的GLFW操作中使用到。创建完窗口我们就可以通知GLFW给我们的窗口在当前的线程中创建我们等待已久的OpenGL上下文了。
 
 <br/>
 
@@ -98,13 +98,13 @@ if (glewInit() != GLEW_OK)
 {% endhighlight %}
 
 
-请注意，我们在初始化GLEW之前设置glewExperimental变量的值为GL\_TRUE，这样做能让GLEW在管理OpenGL的函数指针时更多地使用现代化的技术，如果把它设置为GL\_FALSE的话可能会在使用OpenGL的核心模式（core-profile）时出现一些问题。
+请注意，我们在初始化GLEW之前设置`glewExperimental`变量的值为`GL_TRUE`，这样做能让GLEW在管理OpenGL的函数指针时更多地使用现代化的技术，如果把它设置为`GL_FALSE`的话可能会在使用OpenGL的核心模式（core-profile）时出现一些问题。
 
 <br/>
 
 ### 视口（Viewport）
 
-在我们绘制之前还有一件重要的事情要做，我们必须告诉OpenGL渲染窗口的尺寸大小，这样OpenGL才只能知道要显示数据的窗口坐标。我们可以通过调用glViewport函数来设置这些维度：
+在我们绘制之前还有一件重要的事情要做，我们必须告诉OpenGL渲染窗口的尺寸大小，这样OpenGL才只能知道要显示数据的窗口坐标。我们可以通过调用`glViewport`函数来设置这些维度：
 
 {% highlight c++ %}
 glViewport(0, 0, 800, 600);  
@@ -133,9 +133,9 @@ while(!glfwWindowShouldClose(window))
 }
 {% endhighlight %}
 
-* glfwWindowShouldClose函数在我们每次循环的开始前检查一次GLFW是否准备好要退出，如果是这样的话该函数返回true然后游戏循环便结束了，之后为我们就可以关闭应用程序了。
-* glfwPollEvents函数检查有没有触发什么事件（比如键盘有按钮按下、鼠标移动等）然后调用对应的回调函数（我们可以手动设置这些回调函数）。我们一般在游戏循环的一开始就检查事件。
-* 调用glfwSwapBuffers会交换缓冲区（储存着GLFW窗口每一个像素颜色的缓冲区）
+* `glfwWindowShouldClose`函数在我们每次循环的开始前检查一次GLFW是否准备好要退出，如果是这样的话该函数返回`true`然后游戏循环便结束了，之后为我们就可以关闭应用程序了。
+* `glfwPollEvents`函数检查有没有触发什么事件（比如键盘有按钮按下、鼠标移动等）然后调用对应的回调函数（我们可以手动设置这些回调函数）。我们一般在游戏循环的一开始就检查事件。
+* 调用`glfwSwapBuffers`会交换缓冲区（储存着GLFW窗口每一个像素颜色的缓冲区）
 
 <div class="green_box">
 	<p class="green_title">双缓冲区</p>
@@ -227,7 +227,7 @@ glClear(GL_COLOR_BUFFER_BIT);
 <div class="green_box">
 	<p class="green_title">提示</p>
 	<p class="box_content">
-	你应该能够想起来我们在<a href="/2015/07/26/%2001%20OpenGL.html">[第01章]入门：01 OpenGL (Open Graphics Library)</a>教程的内容， glClearColor函数是一个状态设置函数，而glClear函数则是一个状态应用的函数。
+	你应该能够想起来我们在<a href="/2015/07/26/%2001%20OpenGL.html">[第01章]入门：01 OpenGL (Open Graphics Library)</a>教程的内容， <code>glClearColor</code>函数是一个状态设置函数，而<code>glClear</code>函数则是一个状态应用的函数。
 	</p>
 </div>
 

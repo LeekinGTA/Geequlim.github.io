@@ -166,7 +166,7 @@ GLEW代表OpenGL Extension Wrangler Library，管理我们上面提到的繁琐�
 <div class="green_box">
 	<p class="green_title">提示</p>
 	<p class="box_content">
-  对于Linux用户建议使用这个命令行`-lGLEW -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi`。没有正确链接相应的库会产生*undefined reference* errors.（未定义的引用）
+  对于Linux用户建议使用这个命令行<code>-lGLEW -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi</code>。没有正确链接相应的库会产生<i>undefined reference errors</i>（未定义的引用）。
 	</p>
 </div>
 
