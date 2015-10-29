@@ -14,7 +14,7 @@ description:
 
 [NanoVG](https://github.com/memononen/nanovg) 是一个基于OpenGL的轻量级的矢量图形渲染开源库,由[Mikko Mononen](https://github.com/memononen) 领导开发，并基于[zlib协议](https://github.com/memononen/nanovg/blob/master/LICENSE.txt)开源，项目仓库可本段开头的链接查看。由于其易用性被国外许多开源项目所用.也有许多衍生版本，如 [Branimir Karadžić](https://github.com/bkaradzic) 大神编写的[bgfx版本](https://github.com/bkaradzic/bgfx/tree/master/examples/20-nanovg) 、[Chris Maughan](https://github.com/cmaughan) 编写的 [DX11版本](https://github.com/cmaughan) 。
 
-<img class="" src="https://raw.githubusercontent.com/memononen/nanovg/master/example/screenshot-01.png">
+<img class="post_center_img" src="https://raw.githubusercontent.com/memononen/nanovg/master/example/screenshot-01.png">
 
 如上图所示，NanoVG能快速地绘制出令人赞叹的矢量图形，得益于各路大神的衍生版本使得NanoVG不仅仅能使用OpenGL进行硬件加速，其适用范围扩大到各个图形领域。
 
@@ -36,7 +36,7 @@ description:
 从这里获取到你需要的glad代码，并添加到你的项目中。
 当然选择OpenGL ES 的支持是必要的：
 
-<img src="/assets/img/blog/nanovg/glad_config.png">
+<img class="post_center_img" src="/assets/img/blog/nanovg/glad_config.png">
 
 添加glad的代码到你的项目之后孩需要对代码进行修改，引用glad并添加OpenGL ES的支持
 
@@ -291,6 +291,6 @@ NanoVG绘制操作须放在`nvgBeginFrame`和`nvgEndFrame`两函数之间。
 
 运行效果如下所示：
 
-<img src="/assets/img/nanovg/helloGLFW.png">
+<img class="post_center_img" src="/assets/img/nanovg/helloGLFW.png">
 
 至此基于GLFW的NanoVG跨平台绘图环境搭建完毕，接下来就尽情领受NanoVG的风采吧！
