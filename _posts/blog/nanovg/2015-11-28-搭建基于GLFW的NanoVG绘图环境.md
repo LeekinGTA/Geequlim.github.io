@@ -5,18 +5,18 @@ category: 'NanoVG'
 tags: 'NanoVG'
 previousTitle: ''
 previousUrl: ''
-nextTitle: ''
-nextUrl: ''
+nextTitle: 'NanoVG路径API详解'
+nextUrl: '/2015/11/29/00-NanoVG路径API详解.html'
 description:
 ---
 
-### NanoVG简介
-
 [NanoVG](https://github.com/memononen/nanovg) 是一个基于OpenGL的轻量级的矢量图形渲染开源库,由[Mikko Mononen](https://github.com/memononen) 领导开发，并基于[zlib协议](https://github.com/memononen/nanovg/blob/master/LICENSE.txt)开源，项目仓库可本段开头的链接查看。由于其易用性被国外许多开源项目所用.也有许多衍生版本，如 [Branimir Karadžić](https://github.com/bkaradzic) 大神编写的[bgfx版本](https://github.com/bkaradzic/bgfx/tree/master/examples/20-nanovg) 、[Chris Maughan](https://github.com/cmaughan) 编写的 [DX11版本](https://github.com/cmaughan) 。
 
-<img class="post_center_img" src="https://raw.githubusercontent.com/memononen/nanovg/master/example/screenshot-01.png">
+<img class="post_center_img_noborder" src="https://raw.githubusercontent.com/memononen/nanovg/master/example/screenshot-01.png">
 
 如上图所示，NanoVG能快速地绘制出令人赞叹的矢量图形，得益于各路大神的衍生版本使得NanoVG不仅仅能使用OpenGL进行硬件加速，其适用范围扩大到各个图形领域。
+
+<br>
 
 ### 创建GLFW窗口
 
@@ -24,9 +24,13 @@ description:
 看情况吧，现在主要讨论的是绘图，就先用简单易用的GLFW吧。你可以从[GLFW的官方网站](http://www.glfw.org/)获取到最新的代码，然后你需要编译成你的操作系统对应的链接库，并添加到你的项目中。
 更详细的步骤你可以参考此文[《创建窗口》](http://geequlim.com/2015/07/26/%2002%20Creating%20a%20window.html) 。
 
-#### 推荐使用我的对话框
+<br>
+
+#### 使用轻量级对话框 [NativeDialog](https://github.com
 
 在窗口创建过程中可能会出现一些问题，这时我们可以通过一个对话框提示我们错误信息；为了更方便我们观察我们绘制的图形，我们经常需要对绘图背景等颜色进行修改，我们可以通过一个拾色器对话框帮我们搞定；有时我们还需要操作文件，比如保存截图，也能通过选择文件对话框来帮助我们选择文件。这个轻量级的对话框API能帮你解决这些问题，并且像GLFW一样为你解决跨平台的问题。它目前支持GLFW所支持的操作系统，提供原生的对话框界面。你可以到[我的Github仓库](https://github.com/Geequlim/NativeDialogs)中获取到它，按照说明集成到你的项目中。
+
+<br>
 
 #### OpenGL ES的支持
 
@@ -182,6 +186,8 @@ void resize_callback(GLFWwindow* window,int w,int h)
 }
 {% endhighlight %}
 
+<br>
+
 ### 主角登场
 
 现在可以创建NanoVG并进行矢量图形渲染，在创建NanoVG上下文环境之前，需要先初始化GLFW、创建窗口（OpenGL上下文）并初始化glad。
@@ -288,6 +294,13 @@ int main()
 如上代码所示，所有的NanoVG操作都是通过`nvgCreateContext`创建的NanoVG的上下文进行的。
 NanoVG绘制操作须放在`nvgBeginFrame`和`nvgEndFrame`两函数之间。
 `nvgBeginPath`函数开始定义一个路径，这里使用`nvgRoundedRect`定义了一个圆角长宽均为100的圆角矩形，最后调用`nvgFill`对其填充默认颜色。
+
+<div class="green_box">
+	<p class="green_title">提示</p>
+	<div class="box_content">
+NanoVG中每次渲染工作都是在<code>nvgBeginFrame</code>和<code>nvgEndFrame</code>这两个函数调用之间进行的，所有不在此区间的绘图调用不会起作用。如果在<code>nvgEndFrame</code>函数调用前调用了<code>nvgCancelFrame</code>，那么在<code>nvgCancelFrame</code>之前的绘制命令都会被忽略。
+	</div>
+</div>
 
 运行效果如下所示：
 
