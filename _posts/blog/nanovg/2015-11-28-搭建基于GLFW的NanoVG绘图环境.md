@@ -260,9 +260,6 @@ int main()
         // Define the viewport dimensions
         glViewport(0, 0, wndWidth, wndHeight);
 
-        // set window size
-        NVGResearch::setWindowSize(wndWidth,wndHeight);
-
         // main loop
         while (!glfwWindowShouldClose(window))
         {
