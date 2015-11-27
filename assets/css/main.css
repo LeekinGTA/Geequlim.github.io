@@ -1115,7 +1115,7 @@ pre > code {
 
 /* Punctuation */
 .highlight .cm {
-  color: #586e75; }
+  color: #23af35; }
 
 /* Comment.Multiline */
 .highlight .cp {
@@ -1123,7 +1123,7 @@ pre > code {
 
 /* Comment.Preproc */
 .highlight .c1 {
-  color: #586e75; }
+  color: #3a8630; }
 
 /* Comment.Single */
 .highlight .cs {
@@ -1249,7 +1249,7 @@ pre > code {
 
 /* Name.Namespace */
 .highlight .nx {
-  color: #555555; }
+  color: #d6d6d6; }
 
 /* Name.Other */
 .highlight .py {
